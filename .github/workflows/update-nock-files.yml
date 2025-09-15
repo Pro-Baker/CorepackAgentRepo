@@ -43,7 +43,7 @@ jobs:
           ACTUAL: ${{ fromJson(steps.pr_info.outputs.DATA).head_sha }}
           EXPECTED: ${{ inputs.head_sha }}
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ fromJson(steps.pr_info.outputs.DATA).head_sha }}
 
