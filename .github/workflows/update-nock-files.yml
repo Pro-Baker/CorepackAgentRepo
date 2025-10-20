@@ -48,7 +48,7 @@ jobs:
           ref: ${{ fromJson(steps.pr_info.outputs.DATA).head_sha }}
 
       - name: Install Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: lts/*
 
