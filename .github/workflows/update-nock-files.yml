@@ -101,7 +101,7 @@ jobs:
           REMOTE_REF: ${{ fromJson(steps.pr_info.outputs.DATA).head_ref }}
 
       - name: Upload `tests/nocks.db` in case of failure
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: ${{ failure() && steps.contains-changes.outputs.result == 'yes' }}
         with:
           name: nock
